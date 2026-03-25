@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public API Playground</title>
+    <meta name="description" content="An elegant exploration of four distinct public data streams.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Scripts -->
+    <script type="module" src="js/main.js" defer></script>
+</head>
+<body>
+    <!-- Overlay for tactile grain effect -->
+    <div class="grain-overlay"></div>
+    
+    <!-- Minimalist Navigation -->
+    <nav class="top-nav">
+        <div class="logo">Studio API.</div>
+        <div class="nav-links">
+            <a href="#explore">Explore</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-image">
+            <img src="assets/hero.png" alt="Creative Studio Environment" />
+        </div>
+        <div class="hero-content">
+            <h1>The Art of<br/>Public Data.</h1>
+            <p>An elegant exploration of four distinct public APIs, harmonized into one sophisticated interface.</p>
+        </div>
+    </header>
+
+    <!-- Main Content Area with Asymmetrical Grid -->
+    <main class="grid-container" id="explore">
+        
+        <!-- Dog API Section -->
+        <section class="card card-wide" id="dog-section">
+            <div class="card-header">
+                <h2>01. Canine Form</h2>
+                <button id="btn-dog" class="btn-primary" aria-label="Fetch Dog Image">Discover</button>
+            </div>
+            <div class="card-body asymmetrical-split">
+                <div class="image-container" id="dog-img-container">
+                    <p class="placeholder-text" id="dog-placeholder">Awaiting transmission...</p>
+                </div>
+                <div class="info-container">
+                    <p class="label">Breed extraction</p>
+                    <h3 id="dog-breed" class="data-text">—</h3>
+                    <button id="btn-copy-dog" class="btn-secondary hidden">Copy Image URL</button>
+                    <p id="dog-error" class="error-msg"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Joke API Section -->
+        <section class="card card-tall" id="joke-section">
+            <div class="card-header">
+                <h2>02. Humor Engine</h2>
+                <button id="btn-joke" class="btn-primary" aria-label="Fetch Joke">Generate</button>
+            </div>
+            <div class="card-body joke-content-area">
+                <div class="joke-display">
+                    <p class="label">Setup sequence</p>
+                    <p id="joke-setup" class="data-text">—</p>
+                    <div class="divider"></div>
+                    <p class="label">Resolution</p>
+                    <p id="joke-punchline" class="data-text punchline">—</p>
+                </div>
+                <div class="controls-area">
+                    <button id="btn-next-joke" class="btn-secondary hidden">Next Iteration</button>
+                    <p id="joke-error" class="error-msg"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Random User API Section -->
+        <section class="card card-square" id="user-section">
+            <div class="card-header">
+                <h2>03. Persona</h2>
+                <button id="btn-user" class="btn-primary" aria-label="Fetch Random User">Retrieve</button>
+            </div>
+            <div class="card-body user-profile">
+                <div class="user-intro">
+                    <div class="avatar-wrapper">
+                        <div id="user-avatar-placeholder" class="avatar-placeholder"></div>
+                        <img id="user-avatar" src="" alt="Profile Photo" class="hidden" />
+                    </div>
+                    <div class="identity-info">
+                        <p class="label">Identity</p>
+                        <h3 id="user-name" class="data-text">—</h3>
+                    </div>
+                </div>
+                <div class="user-details">
+                    <p class="label">Contact</p>
+                    <p id="user-email" class="data-text secondary-data">—</p>
+                    
+                    <div class="meta-data">
+                        <div>
+                            <p class="label">Location</p>
+                            <p id="user-country" class="data-text secondary-data">—</p>
+                        </div>
+                        <div>
+                            <p class="label">Age</p>
+                            <p id="user-age" class="data-text secondary-data">—</p>
+                        </div>
+                    </div>
+                </div>
+                <p id="user-error" class="error-msg"></p>
+            </div>
+        </section>
+
+        <!-- JSONPlaceholder Section -->
+        <section class="card card-square" id="post-section">
+            <div class="card-header">
+                <h2>04. Transmission</h2>
+                <button id="btn-post" class="btn-primary" aria-label="Fetch Dummy Post">Decode</button>
+            </div>
+            <div class="card-body post-display">
+                <p class="label">Subject Header</p>
+                <h3 id="post-title" class="data-text">—</h3>
+                <div class="divider"></div>
+                <p class="label">Payload</p>
+                <p id="post-body" class="data-text quote-text">—</p>
+                <p id="post-error" class="error-msg"></p>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
